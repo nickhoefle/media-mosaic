@@ -414,10 +414,10 @@ const NewsFeed = () => {
             </div>
             <div className='swiper-container'>
                 <Swiper
-                    pagination={{
-                        type: "pagination",
+                    pagination= {{
+                        clickable: true,
                     }}
-                    navigation={false}
+                    navigation={true}
                     modules={[Pagination, Navigation]}
                     style={{ position: 'sticky' }}
                     >
