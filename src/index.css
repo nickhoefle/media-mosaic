@@ -380,10 +380,15 @@ code {
     z-index: 999;
   }
 
+  .newsArticles {
+    height: auto;
+    padding-bottom: 8px;
+  }
+
   .political-alignment-header {
     font-size: 28px;
     text-decoration: underline;
-    padding-top: 36px;
+    padding: 36px 0 0 0;
   }
 
   .dropdown-menu-article-count-label {
@@ -426,7 +431,7 @@ code {
   }
 
   * {
-    --swiper-pagination-bottom: 98.75%;
+    --swiper-pagination-bottom: calc(100% - 52px);
     --swiper-pagination-bullet-width: 40px;
     --swiper-pagination-bullet-height: 40px;
   }
@@ -479,4 +484,9 @@ code {
     font-size: 24px;
     padding-top: 5px;
   }
+
+  .swiper-slide-content {
+    height:auto
+  }
+
 }
