@@ -25,6 +25,10 @@ code {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+.article-amount-arrows {
+  display: none;
+}
+
 .close-modal-button {
   background-color: white;
   border: 1px solid black;
@@ -373,6 +377,14 @@ code {
     display: none;
   }
 
+  .minus-button {
+    position: absolute;
+    right: 48px;
+    height: 28px;
+    width: 28px;
+    font-size: 20px;
+  }
+
   .mobile-dropdown-account-header {
     font-size: 28px;
     padding: 0;
@@ -414,6 +426,14 @@ code {
     background-image: url('./assets/newspaper-mobile.jpg') ;
   }
 
+  .plus-button {
+    position: absolute;
+    right: 84px;
+    height: 28px;
+    width: 28px;
+    font-size: 20px;
+  }
+
   .political-alignment-header {
     font-size: 28px;
     text-decoration: underline;
@@ -444,7 +464,7 @@ code {
   }
 
   .source-label {
-    font-size: 21px;
+    font-size: 18px;
   }
 
   .swiper-container {
