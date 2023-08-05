@@ -87,6 +87,8 @@ const NewsFeed = () => {
     const [slateArticles, setSlateArticles] = useState(3); 
     const [showTheIntercept, setShowTheIntercept] = useState(false);
     const [theInterceptArticles, setTheInterceptArticles] = useState(3); 
+    const [showJacobin, setShowJacobin] = useState(false);
+    const [jacobinArticles, setJacobinArticles] = useState(3);
 
     
     useEffect(() => {
@@ -167,6 +169,8 @@ const NewsFeed = () => {
                         setSlateArticles(data.slateArticles || 3);
                         setShowTheIntercept(data.showTheIntercept || false);
                         setTheInterceptArticles(data.theInterceptArticles || 3);
+                        setShowJacobin(data.showJacobin || false);
+                        setJacobinArticles(data.jacobinArticles || 3);
                     }
                 });
             }
@@ -260,6 +264,7 @@ const NewsFeed = () => {
                 showWapo, wapoArticles,
                 showSlate, slateArticles,
                 showTheIntercept, theInterceptArticles,
+                showJacobin, jacobinArticles,
             });
         }
         setIsFlashing(true);
@@ -297,6 +302,7 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('Boston Globe', showBostonGlobe, setShowBostonGlobe, bostonGlobeArticles, setBostonGlobeArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Daily Beast', showDailyBeast, setShowDailyBeast, dailyBeastArticles, setDailyBeastArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Democracy Now!', showDemocracyNow, setShowDemocracyNow, democracyNowArticles, setDemocracyNowArticles)}
+                    {newsSourceCheckboxesAndArticleAmounts('Jacobin', showJacobin, setShowJacobin, jacobinArticles, setJacobinArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('New Yorker', showNewYorker, setShowNewYorker, newYorkerArticles, setNewYorkerArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Salon', showSalon, setShowSalon, salonArticles, setSalonArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Slate', showSlate, setShowSlate, slateArticles, setSlateArticles)}
@@ -348,6 +354,7 @@ const NewsFeed = () => {
                     {showBostonGlobe && newsArticles(showBostonGlobe, bostonGlobeArticles, 23, newsSources)}
                     {showDailyBeast && newsArticles(showDailyBeast, dailyBeastArticles, 4, newsSources)}
                     {showDemocracyNow && newsArticles(showDemocracyNow, democracyNowArticles, 0, newsSources)}
+                    {showJacobin && newsArticles(showJacobin, jacobinArticles, 35, newsSources)}
                     {showNewYorker && newsArticles(showNewYorker, newYorkerArticles, 6, newsSources)}
                     {showSalon && newsArticles(showSalon, salonArticles, 17, newsSources)}
                     {showSlate && newsArticles(showSlate, slateArticles, 33, newsSources)}

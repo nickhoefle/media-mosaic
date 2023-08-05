@@ -233,6 +233,12 @@ const newsSources = [
         name: 'The Intercept',
         url: 'https://theintercept.com/feed/?lang=en',
         logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/The_Intercept_logo.svg/768px-The_Intercept_logo.svg.png?20180418214604',
+    },
+    {
+        index: 35,
+        name: 'Jacobin',
+        url: 'https://jacobin.com/feed',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jacobin_Logo.svg/225px-Jacobin_Logo.svg.png'
     }
 ];
 
