@@ -25,10 +25,6 @@ code {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.article-amount-arrows {
-  display: none;
-}
-
 .close-modal-button {
   background-color: white;
   border: 1px solid black;
@@ -142,6 +138,10 @@ code {
   transform: rotate(-45deg) translate(-2px, 4px);
 }
 
+.minus-button {
+  display: none;
+}
+
 .mobile-no-user-content {
   display: none;
 }
@@ -213,6 +213,10 @@ code {
 .password-input-container {
   display: flex;
   justify-content: left;
+}
+
+.plus-button {
+  display: none;
 }
 
 .political-alignment-column {
@@ -542,7 +546,8 @@ code {
   }
 
   .swiper-slide-content {
-    height:auto
+    height:auto;
+    min-height: 500px;
   }
 
 }
