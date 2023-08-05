@@ -296,7 +296,7 @@ const NewsFeed = () => {
             {isMenuOpen && (
                 <div className="dropdown-menu">
                     <div className='left-and-article-count-container'>
-                        <h3>Left</h3>
+                        <h3 className='dropdown-political-alignment-header'>Left</h3>
                         <u className='dropdown-menu-article-count-label'>Article Count</u>
                     </div>
                     {newsSourceCheckboxesAndArticleAmounts('Boston Globe', showBostonGlobe, setShowBostonGlobe, bostonGlobeArticles, setBostonGlobeArticles)}
@@ -307,7 +307,7 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('Salon', showSalon, setShowSalon, salonArticles, setSalonArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Slate', showSlate, setShowSlate, slateArticles, setSlateArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('The Intercept', showTheIntercept, setShowTheIntercept, theInterceptArticles, setTheInterceptArticles)}
-                    <h3>Center Left</h3>
+                    <h3 className='dropdown-political-alignment-header'>Center Left</h3>
                     {newsSourceCheckboxesAndArticleAmounts('Axios', showAxios, setShowAxios, axiosArticles, setAxiosArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Der Spiegel', showDerSpiegel, setShowDerSpiegel, derSpiegelArticles, setDerSpiegelArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Five Thirty Eight', showFiveThirtyEight, setShowFiveThirtyEight, fiveThirtyEightArticles, setFiveThirtyEightArticles)}
@@ -315,7 +315,7 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('New York Times', showNewYorkTimes, setShowNewYorkTimes, newYorkTimesArticles, setNewYorkTimesArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Vox', showVox, setShowVox, voxArticles, setVoxArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Washington Post - Politics', showWapo, setShowWapo, wapoArticles, setWapoArticles)}
-                    <h3>Center</h3>
+                    <h3 className='dropdown-political-alignment-header'>Center</h3>
                     {newsSourceCheckboxesAndArticleAmounts('CNBC - US News', showCnbcUs, setShowCnbcUs, cnbcUsArticles, setCnbcUsArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('BBC News', showBBCNews, setShowBBCNews, bbcArticles, setBBCArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('The Hill', showTheHill, setShowTheHill, theHillArticles, setTheHillArticles)}
@@ -323,7 +323,7 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('Marketwatch', showMarketwatch, setShowMarketwatch, marketwatchArticles, setMarketwatchArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Real Clear Politics', showRCP, setShowRCP, rcpArticles, setRCPArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Sky News', showSkyNews, setShowSkyNews, skyNewsArticles, setSkyNewsArticles)}
-                    <h3>Center Right</h3>
+                    <h3 className='dropdown-political-alignment-header'>Center Right</h3>
                     {newsSourceCheckboxesAndArticleAmounts('New Tang Dynasty', showNtd, setShowNtd, ntdArticles, setNtdArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('New York Post', showNYPOST, setShowNYPOST, NYPOSTArticles, setNYPOSTArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Reason', showReason, setShowReason, reasonArticles, setReasonArticles)}
@@ -331,7 +331,7 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('The Dispatch', showTheDispatch, setShowTheDispatch, theDispatchArticles, setTheDispatchArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('The Sun', showTheSunUs, setShowTheSunUs, theSunUsArticles, setTheSunUsArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Wall Street Journal - World', showWsjWorld, setShowWsjWorld, wsjWorldArticles, setWsjWorldArticles)}
-                    <h3>Right</h3>
+                    <h3 className='dropdown-political-alignment-header'>Right</h3>
                     {newsSourceCheckboxesAndArticleAmounts('Breitbart', showBreitbart, setShowBreitbart, brietbartAritcles, setBreitbartArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Daily Mail', showDailyMail, setShowDailyMail, dailyMailArticles, setDailyMailArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('National Review', showNationalReview, setShowNationalReview, nationalReviewArticles, setNationalReviewArticles)}

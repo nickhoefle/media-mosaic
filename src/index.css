@@ -321,3 +321,58 @@ code {
   transform: translateX(-50%);
   font-style: italic;
 }
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  
+  input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+  }
+
+  .amount-of-articles-input {
+    width: 20px;
+    font-size: 20px;
+    height: 22px;
+    text-align: center;
+  }
+
+  .dropdown-menu {
+    width: 99vw;
+    border-top: 2px solid black;
+  }
+
+  .my-feed-text {
+    display: none;
+  }
+
+  .navbar {
+    border-bottom: 2px solid black;
+  }
+
+  .dropdown-menu-article-count-label {
+    padding: 60px 10px 4px 0;
+    font-size: 18px;
+  }
+
+  .dropdown-political-alignment-header {
+    font-size: 28px;
+  }
+
+  .register-link {
+    display: none;
+  }
+
+  .sign-in-link {
+    display: none;
+  }
+
+  .source-label {
+    font-size: 21px;
+  }
+
+  .website-title {
+    font-size: 42px;
+    left: 55%;
+  }
+}
