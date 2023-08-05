@@ -4,6 +4,12 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
 import newsSources from '../newsSources';
 import newsSourceCheckboxesAndArticleAmounts from '../HelperFunctions/newsSourceCheckboxesAndArticleAmounts.js';
 import newsArticles from '../HelperFunctions/newsArticles';
@@ -304,7 +310,6 @@ const NewsFeed = () => {
                         <h3 className='dropdown-political-alignment-header'>Left</h3>
                         <u className='dropdown-menu-article-count-label'>Article Count</u>
                     </div>
-                    <div>
                     {newsSourceCheckboxesAndArticleAmounts('Boston Globe', showBostonGlobe, setShowBostonGlobe, bostonGlobeArticles, setBostonGlobeArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Daily Beast', showDailyBeast, setShowDailyBeast, dailyBeastArticles, setDailyBeastArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Democracy Now!', showDemocracyNow, setShowDemocracyNow, democracyNowArticles, setDemocracyNowArticles)}
@@ -313,7 +318,6 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('Salon', showSalon, setShowSalon, salonArticles, setSalonArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Slate', showSlate, setShowSlate, slateArticles, setSlateArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('The Intercept', showTheIntercept, setShowTheIntercept, theInterceptArticles, setTheInterceptArticles)}
-                    </div>
                     <h3 className='dropdown-political-alignment-header'>Center Left</h3>
                     {newsSourceCheckboxesAndArticleAmounts('Axios', showAxios, setShowAxios, axiosArticles, setAxiosArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Der Spiegel', showDerSpiegel, setShowDerSpiegel, derSpiegelArticles, setDerSpiegelArticles)}
@@ -407,6 +411,69 @@ const NewsFeed = () => {
                     {showTheFederalist && newsArticles(showTheFederalist, theFederalistArticles, 11, newsSources)}
                     {showWashingtonFreeBeacon && newsArticles(showWashingtonFreeBeacon, washingtonFreeBeaconArticles, 13, newsSources)}
                 </div>
+            </div>
+            <div className='swiper-container'>
+                <Swiper
+                    pagination={{
+                        type: "pagination",
+                    }}
+                    navigation={false}
+                    modules={[Pagination, Navigation]}
+                    style={{ position: 'sticky' }}
+                    >
+                        
+                        <SwiperSlide>
+                            <h3 className='political-alignment-header'>Left</h3>
+                            {showBostonGlobe && newsArticles(showBostonGlobe, bostonGlobeArticles, 23, newsSources)}
+                            {showDailyBeast && newsArticles(showDailyBeast, dailyBeastArticles, 4, newsSources)}
+                            {showDemocracyNow && newsArticles(showDemocracyNow, democracyNowArticles, 0, newsSources)}
+                            {showJacobin && newsArticles(showJacobin, jacobinArticles, 35, newsSources)}
+                            {showNewYorker && newsArticles(showNewYorker, newYorkerArticles, 6, newsSources)}
+                            {showSalon && newsArticles(showSalon, salonArticles, 17, newsSources)}
+                            {showSlate && newsArticles(showSlate, slateArticles, 33, newsSources)}
+                            {showTheIntercept && newsArticles(showTheIntercept, theInterceptArticles, 34, newsSources)}
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <h3 className='political-alignment-header'>Center Left</h3>
+                            {showAxios && newsArticles(showAxios, axiosArticles, 5, newsSources)}
+                            {showDerSpiegel && newsArticles(showDerSpiegel, derSpiegelArticles, 19, newsSources)}
+                            {showFiveThirtyEight && newsArticles(showFiveThirtyEight, fiveThirtyEightArticles, 30, newsSources)}
+                            {showMediaite && newsArticles(showBostonGlobe, bostonGlobeArticles, 18, newsSources)}
+                            {showNewYorkTimes && newsArticles(showNewYorkTimes, newYorkTimesArticles, 1, newsSources)}
+                            {showVox && newsArticles(showVox, voxArticles, 31, newsSources)}
+                            {showWapo && newsArticles(showWapo, wapoArticles, 32, newsSources)}
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <h3 className='political-alignment-header'>Center</h3>
+                            {showBBCNews && newsArticles(showBBCNews, bbcArticles, 7, newsSources)}
+                            {showCnbcUs && newsArticles(showCnbcUs, cnbcUsArticles, 29, newsSources)}
+                            {showTheHill && newsArticles(showTheHill, theHillArticles, 3, newsSources)}
+                            {showJerusalemPost && newsArticles(showJerusalemPost, jerusalemPostArticles, 21, newsSources)}
+                            {showMarketwatch && newsArticles(showMarketwatch, marketwatchArticles, 20, newsSources)}
+                            {showRCP && newsArticles(showRCP, rcpArticles, 22, newsSources)}
+                            {showSkyNews && newsArticles(showSkyNews, skyNewsArticles, 16, newsSources)}
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <h3 className='political-alignment-header'>Center Right</h3>
+                            {showNtd && newsArticles(showNtd, ntdArticles, 27, newsSources)}
+                            {showNYPOST && newsArticles(showNYPOST, NYPOSTArticles, 24, newsSources)}
+                            {showReason && newsArticles(showReason, reasonArticles, 15, newsSources)}
+                            {showRussiaToday && newsArticles(showRussiaToday, russiaTodayArticles, 26, newsSources)}
+                            {showTheDispatch && newsArticles(showTheDispatch, theDispatchArticles, 8, newsSources)}
+                            {showTheSunUs && newsArticles(showTheSunUs, theSunUsArticles, 25, newsSources)}
+                            {showWsjWorld && newsArticles(showWsjWorld, wsjWorldArticles, 28, newsSources)}
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <h3 className='political-alignment-header'>Right</h3>
+                            {showBreitbart && newsArticles(showBreitbart, brietbartAritcles, 10, newsSources)}
+                            {showDailyMail && newsArticles(showDailyMail, dailyMailArticles, 2, newsSources)}
+                            {showNationalReview && newsArticles(showNationalReview, nationalReviewArticles, 14, newsSources)}
+                            {showOneAmericaNews && newsArticles(showOneAmericaNews, oneAmericaNewsArticles, 12, newsSources)}
+                            {showTheBlaze && newsArticles(showTheBlaze, theBlazeArticles, 9, newsSources)}
+                            {showTheFederalist && newsArticles(showTheFederalist, theFederalistArticles, 11, newsSources)}
+                            {showWashingtonFreeBeacon && newsArticles(showWashingtonFreeBeacon, washingtonFreeBeaconArticles, 13, newsSources)}
+                        </SwiperSlide>
+                    </Swiper>
             </div>
         </>
     );

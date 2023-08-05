@@ -313,6 +313,10 @@ code {
   flex-direction: column;
 }
 
+.swiper-container {
+  display: none;
+}
+
 .user-auth-component-desktop {
   position: sticky;
   top: 0;
@@ -352,6 +356,10 @@ code {
     display: none;
   }
 
+  .five-column-container {
+    display: none;
+  }
+
   .mobile-dropdown-account-header {
     font-size: 28px;
     padding: 0;
@@ -369,6 +377,7 @@ code {
 
   .navbar {
     border-bottom: 2px solid black;
+    z-index: 999;
   }
 
   .dropdown-menu-article-count-label {
@@ -389,6 +398,11 @@ code {
 
   .source-label {
     font-size: 21px;
+  }
+
+  .swiper-container {
+    display: flex;
+    z-index: 0;
   }
 
   .website-title {
