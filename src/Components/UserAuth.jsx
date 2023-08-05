@@ -32,33 +32,40 @@ const UserAuth = ({ isMenuOpen, setIsMenuOpen }) => {
                     <button onClick={handleLogout}>Logout</button>
                 </div>
             ) : (
-                <div style={{ display: 'flex', margin: '0 0 0 10px' }}>
-                    <span 
-                        onClick={() => {
-                            setShowModal(true);
-                            setIsMenuOpen(false);
-                        }}
-                        className='sign-in-link'
-                    >Sign in</span>
-                    <Link
-                        className='register-link'
-                        to="/register"
-                    >Register</Link>         
-                    {showModal && (
-                        <div className='modal-overlay'>
-                            <div className='modal-content'>
-                                <div className='close-modal-container'>
-                                    <span
-                                        className='close-modal-button'
-                                        onClick={() => setShowModal(false)}
-                                    >X</span>
+                <>
+                    <div className='desktop-no-user-content' style={{ display: 'flex', margin: '0 0 0 10px' }}>
+                        <span 
+                            onClick={() => {
+                                setShowModal(true);
+                                setIsMenuOpen(false);
+                            }}
+                            className='sign-in-link'
+                        >Sign in</span>
+                        <Link
+                            className='register-link'
+                            to="/register"
+                        >Register</Link>         
+                        {showModal && (
+                            <div className='modal-overlay'>
+                                <div className='modal-content'>
+                                    <div className='close-modal-container'>
+                                        <span
+                                            className='close-modal-button'
+                                            onClick={() => setShowModal(false)}
+                                        >X</span>
+                                    </div>
+                                    <SignInContent />
                                 </div>
-                                <SignInContent />
                             </div>
-                        </div>
-                    )}
-                    {error && <p>{error}</p>}
-                </div>
+                        )}
+                        {error && <p>{error}</p>}
+                    </div>
+                    <div className='mobile-no-user-content'>
+                        <a href='/sign-in' className='mobile-sign-in-link'>Sign In</a>
+                        <a href='/register' className='mobile-register-link'>Register</a>
+                    </div>
+                </>
+            
             )}
         </div>
     );
