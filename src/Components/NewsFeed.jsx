@@ -284,10 +284,11 @@ const NewsFeed = () => {
             <nav className='navbar'>
                 <div className="menu-icon" onClick={handleMenuToggle}>
                     {isMenuOpen ? <div className="x-icon">X</div> : <div className="hamburger-icon">☰</div>}
+                    <h2 className='my-feed-text'>My Feed</h2>
                 </div>
-                <h2 className='my-feed-text'>My Feed</h2>
+                
                 <span className='website-title'>MediaMosiac</span>
-                <div className='user-auth-component'>
+                <div className='desktop-user-auth-component'>
                     <UserAuth isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
                 </div>
             </nav>
@@ -295,10 +296,15 @@ const NewsFeed = () => {
             {/* NEWS  SOURCES  AND  CHECKBOXES */}
             {isMenuOpen && (
                 <div className="dropdown-menu">
+                    <div className='mobile-user-auth-component'>
+                        <h3 className='mobile-dropdown-account-header'>Account</h3>
+                        <UserAuth isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
+                    </div>
                     <div className='left-and-article-count-container'>
                         <h3 className='dropdown-political-alignment-header'>Left</h3>
                         <u className='dropdown-menu-article-count-label'>Article Count</u>
                     </div>
+                    <div>
                     {newsSourceCheckboxesAndArticleAmounts('Boston Globe', showBostonGlobe, setShowBostonGlobe, bostonGlobeArticles, setBostonGlobeArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Daily Beast', showDailyBeast, setShowDailyBeast, dailyBeastArticles, setDailyBeastArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Democracy Now!', showDemocracyNow, setShowDemocracyNow, democracyNowArticles, setDemocracyNowArticles)}
@@ -307,6 +313,7 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('Salon', showSalon, setShowSalon, salonArticles, setSalonArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Slate', showSlate, setShowSlate, slateArticles, setSlateArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('The Intercept', showTheIntercept, setShowTheIntercept, theInterceptArticles, setTheInterceptArticles)}
+                    </div>
                     <h3 className='dropdown-political-alignment-header'>Center Left</h3>
                     {newsSourceCheckboxesAndArticleAmounts('Axios', showAxios, setShowAxios, axiosArticles, setAxiosArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Der Spiegel', showDerSpiegel, setShowDerSpiegel, derSpiegelArticles, setDerSpiegelArticles)}
