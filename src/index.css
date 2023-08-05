@@ -380,6 +380,12 @@ code {
     z-index: 999;
   }
 
+  .political-alignment-header {
+    font-size: 28px;
+    text-decoration: underline;
+    padding-top: 36px;
+  }
+
   .dropdown-menu-article-count-label {
     padding: 60px 10px 4px 0;
     font-size: 18px;
