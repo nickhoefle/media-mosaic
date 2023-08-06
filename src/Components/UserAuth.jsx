@@ -61,8 +61,8 @@ const UserAuth = ({ isMenuOpen, setIsMenuOpen }) => {
                         {error && <p>{error}</p>}
                     </div>
                     <div className='mobile-no-user-content'>
-                        <a href='/sign-in' className='mobile-sign-in-link'>Sign In</a>
-                        <a href='/register' className='mobile-register-link'>Register</a>
+                        <Link to='/sign-in' className='mobile-sign-in-link'>Sign In</Link>
+                        <Link to='/register' className='mobile-register-link'>Register</Link>
                     </div>
                 </>
             

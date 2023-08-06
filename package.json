@@ -1,6 +1,7 @@
 {
   "name": "react-news-aggregator-app",
   "version": "0.1.0",
+  "homepage": "/media-mosaic/",
   "private": true,
   "dependencies": {
     "@firebase/auth": "^1.1.0",
