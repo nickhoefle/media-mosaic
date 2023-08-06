@@ -26,7 +26,7 @@ firebase.initializeApp(firebaseConfig);
 
 function App() {
   return (
-    <Router>
+    <Router basename='media-mosaic'>
       <div>
         <Routes>
           <Route path="/" element={<Home />} />

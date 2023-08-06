@@ -1,0 +1,27 @@
+If needed, remove current build file in /var/www/html/media-mosaic on server with:
+    sudo rm -rf /var/www/html/media-mosaic/*
+
+Grant permissions to www-data:
+    sudo chown -R www-data:www-data /var/www/html/media-mosaic
+    sudo chmod -R 755 /var/www/html/media-mosaic
+
+If there are issues loading on nickhoefle.com/media-mosaic, make sure package.json in project has:
+    "homepage": "/media-mosaic/",
+
+Unsure if it is necessary, but it was successfully deployed with this code block inside of the apache2 000-default.conf file:
+    <Directory /var/www/html/media-mosaic>
+        Options Indexes FollowSymLinks
+        AllowOverride AllowOverride
+        Require all granted
+    </Directory>
+
+    <IfModule mod_mime.c>
+        AddType application/javascript json
+        AddType text/javascript js
+    </IfModule>
+
+This project has been successfully deployed without using a reverse proxy. 
+
+If there are further issues, check the href file paths inside of the index.html file created by 'npm run build'
+
+If there are issues with Firebase - be sure that nickhoefle.com or whichever domain used is whitelisted.
