@@ -31,7 +31,8 @@ const SignInContent = () => {
     return (
         <>
             <h1 className='sign-in-text'>Sign in to MediaMosaic</h1>                           
-            <label htmlFor='email-input'>Email</label><br />
+            <label htmlFor='email-input'>Email</label>
+            <br />
             <div className='email-input-container'>
                 <input
                     id='email-input'
@@ -68,7 +69,7 @@ const SignInContent = () => {
                 />
             </div>
             <hr />
-            <p style={{ justifyContent: 'right' }}>
+            <p>
                 <Link to="/register">Don't have an account? Register here.</Link>
             </p>
         </>
