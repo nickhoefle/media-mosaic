@@ -291,8 +291,7 @@ const NewsFeed = () => {
                 <div className="menu-icon" onClick={handleMenuToggle}>
                     {isMenuOpen ? <div className="x-icon">X</div> : <div className="hamburger-icon">☰</div>}
                     <h2 className='my-feed-text'>My Feed</h2>
-                </div>
-                
+                </div>              
                 <span className='website-title'>MediaMosiac</span>
                 <div className='desktop-user-auth-component'>
                     <UserAuth isMenuOpen={isMenuOpen} setIsMenuOpen={setIsMenuOpen} />
@@ -413,63 +412,63 @@ const NewsFeed = () => {
                 </div>
             </div>
             <div className='swiper-container'>
-                <Swiper
-                    pagination= {{
-                        clickable: true,
-                    }}
-                    navigation={false}
-                    modules={[Pagination, Navigation]}
-                    autoHeight
-                    onSlideChange={ () => {window.scrollTo({ top: 0, behavior: 'smooth' })} }   
-                    >                       
+                    <Swiper
+                        pagination= {{
+                            clickable: true,
+                        }}
+                        navigation={false}
+                        modules={[Pagination, Navigation]}
+                        autoHeight
+                        onSlideChange={ () => {window.scrollTo({ top: 0, behavior: 'smooth' })} }   
+                        >                       
                         <SwiperSlide>
-                        <div className="swiper-slide-content">
-                            <h3 className='political-alignment-header'>Left</h3>
-                            {showBostonGlobe && newsArticles(showBostonGlobe, bostonGlobeArticles, 23, newsSources)}
-                            {showDailyBeast && newsArticles(showDailyBeast, dailyBeastArticles, 4, newsSources)}
-                            {showDemocracyNow && newsArticles(showDemocracyNow, democracyNowArticles, 0, newsSources)}
-                            {showJacobin && newsArticles(showJacobin, jacobinArticles, 35, newsSources)}
-                            {showNewYorker && newsArticles(showNewYorker, newYorkerArticles, 6, newsSources)}
-                            {showSalon && newsArticles(showSalon, salonArticles, 17, newsSources)}
-                            {showSlate && newsArticles(showSlate, slateArticles, 33, newsSources)}
-                            {showTheIntercept && newsArticles(showTheIntercept, theInterceptArticles, 34, newsSources)}
-                        </div>
+                            <div className="swiper-slide-content">
+                                <h3 className='political-alignment-header'>Left</h3>
+                                {showBostonGlobe && newsArticles(showBostonGlobe, bostonGlobeArticles, 23, newsSources)}
+                                {showDailyBeast && newsArticles(showDailyBeast, dailyBeastArticles, 4, newsSources)}
+                                {showDemocracyNow && newsArticles(showDemocracyNow, democracyNowArticles, 0, newsSources)}
+                                {showJacobin && newsArticles(showJacobin, jacobinArticles, 35, newsSources)}
+                                {showNewYorker && newsArticles(showNewYorker, newYorkerArticles, 6, newsSources)}
+                                {showSalon && newsArticles(showSalon, salonArticles, 17, newsSources)}
+                                {showSlate && newsArticles(showSlate, slateArticles, 33, newsSources)}
+                                {showTheIntercept && newsArticles(showTheIntercept, theInterceptArticles, 34, newsSources)}
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <div className="swiper-slide-content">
-                            <h3 className='political-alignment-header'>Center Left</h3>
-                            {showAxios && newsArticles(showAxios, axiosArticles, 5, newsSources)}
-                            {showDerSpiegel && newsArticles(showDerSpiegel, derSpiegelArticles, 19, newsSources)}
-                            {showFiveThirtyEight && newsArticles(showFiveThirtyEight, fiveThirtyEightArticles, 30, newsSources)}
-                            {showMediaite && newsArticles(showBostonGlobe, bostonGlobeArticles, 18, newsSources)}
-                            {showNewYorkTimes && newsArticles(showNewYorkTimes, newYorkTimesArticles, 1, newsSources)}
-                            {showVox && newsArticles(showVox, voxArticles, 31, newsSources)}
-                            {showWapo && newsArticles(showWapo, wapoArticles, 32, newsSources)}
-                        </div>
+                            <div className="swiper-slide-content">
+                                <h3 className='political-alignment-header'>Center Left</h3>
+                                {showAxios && newsArticles(showAxios, axiosArticles, 5, newsSources)}
+                                {showDerSpiegel && newsArticles(showDerSpiegel, derSpiegelArticles, 19, newsSources)}
+                                {showFiveThirtyEight && newsArticles(showFiveThirtyEight, fiveThirtyEightArticles, 30, newsSources)}
+                                {showMediaite && newsArticles(showBostonGlobe, bostonGlobeArticles, 18, newsSources)}
+                                {showNewYorkTimes && newsArticles(showNewYorkTimes, newYorkTimesArticles, 1, newsSources)}
+                                {showVox && newsArticles(showVox, voxArticles, 31, newsSources)}
+                                {showWapo && newsArticles(showWapo, wapoArticles, 32, newsSources)}
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <div className="swiper-slide-content">
-                            <h3 className='political-alignment-header'>Center</h3>
-                            {showBBCNews && newsArticles(showBBCNews, bbcArticles, 7, newsSources)}
-                            {showCnbcUs && newsArticles(showCnbcUs, cnbcUsArticles, 29, newsSources)}
-                            {showTheHill && newsArticles(showTheHill, theHillArticles, 3, newsSources)}
-                            {showJerusalemPost && newsArticles(showJerusalemPost, jerusalemPostArticles, 21, newsSources)}
-                            {showMarketwatch && newsArticles(showMarketwatch, marketwatchArticles, 20, newsSources)}
-                            {showRCP && newsArticles(showRCP, rcpArticles, 22, newsSources)}
-                            {showSkyNews && newsArticles(showSkyNews, skyNewsArticles, 16, newsSources)}
-                        </div>
+                            <div className="swiper-slide-content">
+                                <h3 className='political-alignment-header'>Center</h3>
+                                {showBBCNews && newsArticles(showBBCNews, bbcArticles, 7, newsSources)}
+                                {showCnbcUs && newsArticles(showCnbcUs, cnbcUsArticles, 29, newsSources)}
+                                {showTheHill && newsArticles(showTheHill, theHillArticles, 3, newsSources)}
+                                {showJerusalemPost && newsArticles(showJerusalemPost, jerusalemPostArticles, 21, newsSources)}
+                                {showMarketwatch && newsArticles(showMarketwatch, marketwatchArticles, 20, newsSources)}
+                                {showRCP && newsArticles(showRCP, rcpArticles, 22, newsSources)}
+                                {showSkyNews && newsArticles(showSkyNews, skyNewsArticles, 16, newsSources)}
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
-                        <div className="swiper-slide-content">
-                            <h3 className='political-alignment-header'>Center Right</h3>
-                            {showNtd && newsArticles(showNtd, ntdArticles, 27, newsSources)}
-                            {showNYPOST && newsArticles(showNYPOST, NYPOSTArticles, 24, newsSources)}
-                            {showReason && newsArticles(showReason, reasonArticles, 15, newsSources)}
-                            {showRussiaToday && newsArticles(showRussiaToday, russiaTodayArticles, 26, newsSources)}
-                            {showTheDispatch && newsArticles(showTheDispatch, theDispatchArticles, 8, newsSources)}
-                            {showTheSunUs && newsArticles(showTheSunUs, theSunUsArticles, 25, newsSources)}
-                            {showWsjWorld && newsArticles(showWsjWorld, wsjWorldArticles, 28, newsSources)}
-                        </div>
+                            <div className="swiper-slide-content">
+                                <h3 className='political-alignment-header'>Center Right</h3>
+                                {showNtd && newsArticles(showNtd, ntdArticles, 27, newsSources)}
+                                {showNYPOST && newsArticles(showNYPOST, NYPOSTArticles, 24, newsSources)}
+                                {showReason && newsArticles(showReason, reasonArticles, 15, newsSources)}
+                                {showRussiaToday && newsArticles(showRussiaToday, russiaTodayArticles, 26, newsSources)}
+                                {showTheDispatch && newsArticles(showTheDispatch, theDispatchArticles, 8, newsSources)}
+                                {showTheSunUs && newsArticles(showTheSunUs, theSunUsArticles, 25, newsSources)}
+                                {showWsjWorld && newsArticles(showWsjWorld, wsjWorldArticles, 28, newsSources)}
+                            </div>
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="swiper-slide-content">
