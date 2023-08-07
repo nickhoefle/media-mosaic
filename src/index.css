@@ -38,6 +38,11 @@ code {
   justify-content: right;
 }
 
+.desktop-no-user-content {
+  display: flex;
+  margin: 0 0 0 10px;
+}
+
 .dropdown-menu {
   width: 20vw;
   height: 90vh;
@@ -134,10 +139,6 @@ code {
   border-bottom: 1px solid black;
 }
 
-.line-open {
-  transform: rotate(-45deg) translate(-2px, 4px);
-}
-
 .minus-button {
   display: none;
 }
@@ -227,20 +228,6 @@ code {
   text-align: center;
 }
 
-.register-email-input {
-  height: 25px;
-  width: 100%;
-  margin-top: 8px;
-  border: 1px solid black;
-}
-
-.register-password-input {
-  height: 25px;
-  width: 100%;
-  margin-top: 8px;
-  border: 1px solid black;
-}
-
 .register-container {
   position: absolute;
   top: 35%;
@@ -254,10 +241,24 @@ code {
   border-radius: 5px;
 }
 
+.register-email-input {
+  height: 25px;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid black;
+}
+
 .register-link {
   text-decoration: none;
   color: inherit;
   margin-left: 24px;
+}
+
+.register-password-input {
+  height: 25px;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid black;
 }
 
 .register-title {
@@ -355,9 +356,15 @@ code {
     font-size: 20px;
     height: 22px;
     text-align: center;
+    -moz-appearance: textfield; /* Firefox */
+    appearance: textfield;
   }
 
   .desktop-no-user-content {
+    display: none;
+  }
+
+  .desktop-user-auth-component {
     display: none;
   }
 
@@ -367,8 +374,13 @@ code {
     border-top: 2px solid black;
   }
 
-  .desktop-user-auth-component {
-    display: none;
+  .dropdown-menu-article-count-label {
+    padding: 60px 10px 4px 0;
+    font-size: 18px;
+  }
+
+  .dropdown-political-alignment-header {
+    font-size: 28px;
   }
   
   .email {
@@ -394,16 +406,16 @@ code {
     margin-top: 12px;
   }
 
+  .mobile-no-user-content {
+    display: block;
+  }
+
   .mobile-register-link,
   .mobile-sign-in-link {
     font-size: 20px;
     padding-right: 36px;
     text-decoration: underline;
     color: inherit;
-  }
-
-  .mobile-no-user-content {
-    display: block;
   }
 
   .mobile-user-auth-component {
@@ -444,15 +456,6 @@ code {
     padding: 36px 0 0 0;
   }
 
-  .dropdown-menu-article-count-label {
-    padding: 60px 10px 4px 0;
-    font-size: 18px;
-  }
-
-  .dropdown-political-alignment-header {
-    font-size: 28px;
-  }
-
   .register-link,
   .sign-in-link {
     display: none;
@@ -482,18 +485,19 @@ code {
   }
 
   /* SWIPER */
+
+  * {
+    --swiper-pagination-bottom: calc(100% - 52px);
+    --swiper-pagination-bullet-width: 40px;
+    --swiper-pagination-bullet-height: 40px;
+  }
+
   .swiper-pagination, .swiper-pagination-clickable, .swiper-pagination-bullets, .swiper-pagination-horizontal {
     display: flex;
     flex-direction: row;
     align-content: space-around;
     justify-content: space-between;
     width: 90%;
-  }
-
-  * {
-    --swiper-pagination-bottom: calc(100% - 52px);
-    --swiper-pagination-bullet-width: 40px;
-    --swiper-pagination-bullet-height: 40px;
   }
 
   .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
