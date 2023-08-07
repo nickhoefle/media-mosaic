@@ -1,6 +1,6 @@
 [ ] - Center L, CL, C, CR, R inside of bullets
 
-[ ] - Widen Article Count input for Firefox mobile or remove up/down arrow buttons
+[x] - Widen Article Count input for Firefox mobile or remove up/down arrow buttons
 
 [ ] - Test on Safari Mobile/other browsers
 
