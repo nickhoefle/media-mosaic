@@ -175,6 +175,7 @@ code {
   text-decoration: underline;
   color: inherit;
   padding-bottom: 15px;
+  font-size: 16px;
 }
 
 .newsArticles {
@@ -435,6 +436,10 @@ code {
   .newsArticles {
     height: auto;
     padding-bottom: 8px;
+  }
+
+  .newsArticleLink {
+    font-size: 20px;
   }
 
   .newspaper-bg {
