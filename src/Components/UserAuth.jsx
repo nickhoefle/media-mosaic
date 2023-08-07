@@ -33,7 +33,7 @@ const UserAuth = ({ isMenuOpen, setIsMenuOpen }) => {
                 </div>
             ) : (
                 <>
-                    <div className='desktop-no-user-content' style={{ display: 'flex', margin: '0 0 0 10px' }}>
+                    <div className='desktop-no-user-content'>
                         <span 
                             onClick={() => {
                                 setShowModal(true);
@@ -64,8 +64,7 @@ const UserAuth = ({ isMenuOpen, setIsMenuOpen }) => {
                         <Link to='/sign-in' className='mobile-sign-in-link'>Sign In</Link>
                         <Link to='/register' className='mobile-register-link'>Register</Link>
                     </div>
-                </>
-            
+                </>            
             )}
         </div>
     );

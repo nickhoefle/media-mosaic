@@ -38,6 +38,11 @@ code {
   justify-content: right;
 }
 
+.desktop-no-user-content {
+  display: flex;
+  margin: 0 0 0 10px;
+}
+
 .dropdown-menu {
   width: 20vw;
   height: 90vh;
@@ -134,10 +139,6 @@ code {
   border-bottom: 1px solid black;
 }
 
-.line-open {
-  transform: rotate(-45deg) translate(-2px, 4px);
-}
-
 .minus-button {
   display: none;
 }
@@ -174,6 +175,7 @@ code {
   text-decoration: underline;
   color: inherit;
   padding-bottom: 15px;
+  font-size: 16px;
 }
 
 .newsArticles {
@@ -227,20 +229,6 @@ code {
   text-align: center;
 }
 
-.register-email-input {
-  height: 25px;
-  width: 100%;
-  margin-top: 8px;
-  border: 1px solid black;
-}
-
-.register-password-input {
-  height: 25px;
-  width: 100%;
-  margin-top: 8px;
-  border: 1px solid black;
-}
-
 .register-container {
   position: absolute;
   top: 35%;
@@ -254,10 +242,24 @@ code {
   border-radius: 5px;
 }
 
+.register-email-input {
+  height: 25px;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid black;
+}
+
 .register-link {
   text-decoration: none;
   color: inherit;
   margin-left: 24px;
+}
+
+.register-password-input {
+  height: 25px;
+  width: 100%;
+  margin-top: 8px;
+  border: 1px solid black;
 }
 
 .register-title {
@@ -355,9 +357,15 @@ code {
     font-size: 20px;
     height: 22px;
     text-align: center;
+    -moz-appearance: textfield; 
+    appearance: textfield;
   }
 
   .desktop-no-user-content {
+    display: none;
+  }
+
+  .desktop-user-auth-component {
     display: none;
   }
 
@@ -367,8 +375,13 @@ code {
     border-top: 2px solid black;
   }
 
-  .desktop-user-auth-component {
-    display: none;
+  .dropdown-menu-article-count-label {
+    padding: 60px 10px 4px 0;
+    font-size: 18px;
+  }
+
+  .dropdown-political-alignment-header {
+    font-size: 28px;
   }
   
   .email {
@@ -386,6 +399,8 @@ code {
     height: 28px;
     width: 28px;
     font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
   }
 
   .mobile-dropdown-account-header {
@@ -394,16 +409,16 @@ code {
     margin-top: 12px;
   }
 
+  .mobile-no-user-content {
+    display: block;
+  }
+
   .mobile-register-link,
   .mobile-sign-in-link {
     font-size: 20px;
     padding-right: 36px;
     text-decoration: underline;
     color: inherit;
-  }
-
-  .mobile-no-user-content {
-    display: block;
   }
 
   .mobile-user-auth-component {
@@ -425,6 +440,10 @@ code {
     padding-bottom: 8px;
   }
 
+  .newsArticleLink {
+    font-size: 20px;
+  }
+
   .newspaper-bg {
     background-image: url('./assets/newspaper-mobile.jpg') ;
   }
@@ -436,21 +455,14 @@ code {
     height: 28px;
     width: 28px;
     font-size: 20px;
+    line-height: 20px;
+    vertical-align: middle;
   }
 
   .political-alignment-header {
     font-size: 28px;
     text-decoration: underline;
     padding: 36px 0 0 0;
-  }
-
-  .dropdown-menu-article-count-label {
-    padding: 60px 10px 4px 0;
-    font-size: 18px;
-  }
-
-  .dropdown-political-alignment-header {
-    font-size: 28px;
   }
 
   .register-link,
@@ -482,18 +494,19 @@ code {
   }
 
   /* SWIPER */
+
+  * {
+    --swiper-pagination-bottom: calc(100% - 52px);
+    --swiper-pagination-bullet-width: 40px;
+    --swiper-pagination-bullet-height: 40px;
+  }
+
   .swiper-pagination, .swiper-pagination-clickable, .swiper-pagination-bullets, .swiper-pagination-horizontal {
     display: flex;
     flex-direction: row;
     align-content: space-around;
     justify-content: space-between;
     width: 90%;
-  }
-
-  * {
-    --swiper-pagination-bottom: calc(100% - 52px);
-    --swiper-pagination-bullet-width: 40px;
-    --swiper-pagination-bullet-height: 40px;
   }
 
   .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
@@ -506,7 +519,7 @@ code {
     display: flex;
     flex-direction: column;
     font-size: 24px;
-    padding-top: 5px;
+    padding-top: 6px;
   }
 
   .swiper-pagination-bullet:nth-child(2):before {
@@ -515,7 +528,7 @@ code {
     display: flex;
     flex-direction: column;
     font-size: 24px;
-    padding-top: 5px;
+    padding-top: 6px;
   }
 
   .swiper-pagination-bullet:nth-child(3):before {
@@ -524,7 +537,8 @@ code {
     display: flex;
     flex-direction: column;
     font-size: 24px;
-    padding-top: 5px;
+    padding-top: 6px;
+    padding-right: 2px;
   }
 
   .swiper-pagination-bullet:nth-child(4):before {
@@ -533,7 +547,7 @@ code {
     display: flex;
     flex-direction: column;
     font-size: 24px;
-    padding-top: 5px;
+    padding-top: 6px;
   }
 
   .swiper-pagination-bullet:nth-child(5):before {
@@ -542,12 +556,13 @@ code {
     display: flex;
     flex-direction: column;
     font-size: 24px;
-    padding-top: 5px;
+    padding-top: 6px;
   }
 
   .swiper-slide-content {
     height:auto;
     min-height: 500px;
+    padding: 10px;
   }
 
 }
