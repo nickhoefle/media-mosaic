@@ -89,6 +89,39 @@ code {
   gap: 15px;
 }
 
+.forgot-password-button {
+  height: 30px; 
+  width: 100%;
+  margin-top: 36px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 16px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
+.forgot-password-container {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  outline: 5px solid black;
+  width: 290px;
+}
+
+.forgot-password-input {
+  height: 25px;
+  width: 100%;
+  margin-top: 8px;
+}
+
+.forgot-password-title {
+  text-align: center;
+}
+
 .google-sign-in {
   cursor: pointer; 
   height: 68px;

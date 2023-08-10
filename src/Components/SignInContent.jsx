@@ -72,6 +72,9 @@ const SignInContent = () => {
             <p>
                 <Link to="/register">Don't have an account? Register here.</Link>
             </p>
+            <p>
+                <Link to="/forgot-password">Forgot your password?</Link>
+            </p>
         </>
     )
 }
