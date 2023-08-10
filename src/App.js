@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Register from './Components/Register';
 import Home from './Components/Home';
 import SignIn from './Components/SignIn';
+import ForgotPassword from './Components/ForgotPassword';
 
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
@@ -32,6 +33,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<Register />} />
           <Route path="/sign-in" element={<SignIn />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
         </Routes>
       </div>
     </Router>
