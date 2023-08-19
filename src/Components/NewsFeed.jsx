@@ -95,13 +95,15 @@ const NewsFeed = () => {
     const [theInterceptArticles, setTheInterceptArticles] = useState(3); 
     const [showJacobin, setShowJacobin] = useState(false);
     const [jacobinArticles, setJacobinArticles] = useState(3);
+    const [showLaTimes, setShowLaTimes] = useState(false);
+    const [laTimesArticles, setLaTimesArticles] = useState(3);
 
     
     useEffect(() => {
-        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {
-            setUser(user);
-            if (isRSSDataFetched && user) {
-                const settingsRef = firebase.firestore().collection('settings').doc(user.uid);
+        const unsubscribe = firebase.auth().onAuthStateChanged((user) => {  // Listens for user login/logout
+            setUser(user);  // Updates the user state above with the received user object
+            if (isRSSDataFetched && user) { 
+                const settingsRef = firebase.firestore().collection('settings').doc(user.uid); // Fetches the document associated with user's UID
                 settingsRef.get().then((doc) => {
                     if (doc.exists) {
                         const data = doc.data();
@@ -177,12 +179,14 @@ const NewsFeed = () => {
                         setTheInterceptArticles(data.theInterceptArticles);
                         setShowJacobin(data.showJacobin);
                         setJacobinArticles(data.jacobinArticles);
+                        setShowLaTimes(data.showLaTimes);
+                        setLaTimesArticles(data.laTimesArticles);
                     }
                 });
             }
         });
-        return () => unsubscribe();
-    }, [isRSSDataFetched]);
+        return () => unsubscribe(); //cleanup function - unsubscribes the listener when the component is unmounted to prevent memory leaks
+    }, [isRSSDataFetched]); // effect triggered when 'isRSSDataFetched' state variable changes
 
 
     useEffect(() => {
@@ -271,6 +275,7 @@ const NewsFeed = () => {
                 showSlate, slateArticles,
                 showTheIntercept, theInterceptArticles,
                 showJacobin, jacobinArticles,
+                showLaTimes, laTimesArticles,
             });
         }
         setIsFlashing(true);
@@ -321,6 +326,7 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('Axios', showAxios, setShowAxios, axiosArticles, setAxiosArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Der Spiegel', showDerSpiegel, setShowDerSpiegel, derSpiegelArticles, setDerSpiegelArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Five Thirty Eight', showFiveThirtyEight, setShowFiveThirtyEight, fiveThirtyEightArticles, setFiveThirtyEightArticles)}
+                    {newsSourceCheckboxesAndArticleAmounts('LA Times', showLaTimes, setShowLaTimes, laTimesArticles, setLaTimesArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Mediaite', showMediaite, setShowMediaite, mediaiteArticles, setMediaiteArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('New York Times', showNewYorkTimes, setShowNewYorkTimes, newYorkTimesArticles, setNewYorkTimesArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Vox', showVox, setShowVox, voxArticles, setVoxArticles)}
@@ -375,6 +381,7 @@ const NewsFeed = () => {
                     {showAxios && newsArticles(showAxios, axiosArticles, 5, newsSources)}
                     {showDerSpiegel && newsArticles(showDerSpiegel, derSpiegelArticles, 19, newsSources)}
                     {showFiveThirtyEight && newsArticles(showFiveThirtyEight, fiveThirtyEightArticles, 30, newsSources)}
+                    {showLaTimes && newsArticles(showLaTimes, laTimesArticles, 36, newsSources)}
                     {showMediaite && newsArticles(showBostonGlobe, bostonGlobeArticles, 18, newsSources)}
                     {showNewYorkTimes && newsArticles(showNewYorkTimes, newYorkTimesArticles, 1, newsSources)}
                     {showVox && newsArticles(showVox, voxArticles, 31, newsSources)}
@@ -440,6 +447,7 @@ const NewsFeed = () => {
                                 {showAxios && newsArticles(showAxios, axiosArticles, 5, newsSources)}
                                 {showDerSpiegel && newsArticles(showDerSpiegel, derSpiegelArticles, 19, newsSources)}
                                 {showFiveThirtyEight && newsArticles(showFiveThirtyEight, fiveThirtyEightArticles, 30, newsSources)}
+                                {showLaTimes && newsArticles(showLaTimes, laTimesArticles, 36, newsSources)}
                                 {showMediaite && newsArticles(showBostonGlobe, bostonGlobeArticles, 18, newsSources)}
                                 {showNewYorkTimes && newsArticles(showNewYorkTimes, newYorkTimesArticles, 1, newsSources)}
                                 {showVox && newsArticles(showVox, voxArticles, 31, newsSources)}
