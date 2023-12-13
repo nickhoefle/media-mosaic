@@ -45,7 +45,7 @@ const newsSourceCheckboxesAndArticleAmounts = (sourceName, checked, onCheckedCha
                     />
                 </>
             )}
-            <hr />
+            <hr className='dropdown-menu-hr' />
         </label>
     );
 };
