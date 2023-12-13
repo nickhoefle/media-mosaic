@@ -37,8 +37,8 @@ const NewsFeed = () => {
     const [axiosArticles, setAxiosArticles] = useState(3);
     const [showNewYorker, setShowNewYorker] = useState(false);
     const [newYorkerArticles, setNewYorkerArticles] = useState(3);
-    const [showBBCNews, setShowBBCNews] = useState(false);
-    const [bbcArticles, setBBCArticles] = useState(3);
+    const [showNewsweek, setShowNewsweek] = useState(false);
+    const [newsweekArticles, setNewsweekArticles] = useState(3);
     const [showTheDispatch, setShowTheDispatch] = useState(true);
     const [theDispatchArticles, setTheDispatchArticles] = useState(3);
     const [showTheBlaze, setShowTheBlaze] = useState(true);
@@ -95,8 +95,6 @@ const NewsFeed = () => {
     const [theInterceptArticles, setTheInterceptArticles] = useState(3); 
     const [showJacobin, setShowJacobin] = useState(false);
     const [jacobinArticles, setJacobinArticles] = useState(3);
-    const [showLaTimes, setShowLaTimes] = useState(false);
-    const [laTimesArticles, setLaTimesArticles] = useState(3);
 
     
     useEffect(() => {
@@ -121,8 +119,8 @@ const NewsFeed = () => {
                         setAxiosArticles(data.axiosArticles);
                         setShowNewYorker(data.showNewYorker);
                         setNewYorkerArticles(data.newYorkerArticles);
-                        setShowBBCNews(data.showBBCNews);
-                        setBBCArticles(data.bbcArticles);
+                        setShowNewsweek(data.showNewsweek);
+                        setNewsweekArticles(data.newsweekArticles);
                         setShowTheDispatch(data.showTheDispatch);
                         setTheDispatchArticles(data.theDispatchArticles); 
                         setShowTheBlaze(data.showTheBlaze);
@@ -179,8 +177,6 @@ const NewsFeed = () => {
                         setTheInterceptArticles(data.theInterceptArticles);
                         setShowJacobin(data.showJacobin);
                         setJacobinArticles(data.jacobinArticles);
-                        setShowLaTimes(data.showLaTimes);
-                        setLaTimesArticles(data.laTimesArticles);
                     }
                 });
             }
@@ -246,7 +242,7 @@ const NewsFeed = () => {
                 showDailyBeast, dailyBeastArticles,
                 showAxios, axiosArticles,
                 showNewYorker, newYorkerArticles,
-                showBBCNews, bbcArticles,
+                showNewsweek, newsweekArticles,
                 showTheDispatch, theDispatchArticles,
                 showTheBlaze, theBlazeArticles,
                 showBreitbart, brietbartAritcles,
@@ -275,7 +271,6 @@ const NewsFeed = () => {
                 showSlate, slateArticles,
                 showTheIntercept, theInterceptArticles,
                 showJacobin, jacobinArticles,
-                showLaTimes, laTimesArticles,
             });
         }
         setIsFlashing(true);
@@ -326,17 +321,16 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('Axios', showAxios, setShowAxios, axiosArticles, setAxiosArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Der Spiegel', showDerSpiegel, setShowDerSpiegel, derSpiegelArticles, setDerSpiegelArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Five Thirty Eight', showFiveThirtyEight, setShowFiveThirtyEight, fiveThirtyEightArticles, setFiveThirtyEightArticles)}
-                    {newsSourceCheckboxesAndArticleAmounts('LA Times', showLaTimes, setShowLaTimes, laTimesArticles, setLaTimesArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Mediaite', showMediaite, setShowMediaite, mediaiteArticles, setMediaiteArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('New York Times', showNewYorkTimes, setShowNewYorkTimes, newYorkTimesArticles, setNewYorkTimesArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Vox', showVox, setShowVox, voxArticles, setVoxArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Washington Post - Politics', showWapo, setShowWapo, wapoArticles, setWapoArticles)}
                     <h3 className='dropdown-political-alignment-header'>Center</h3>
-                    {newsSourceCheckboxesAndArticleAmounts('CNBC - US News', showCnbcUs, setShowCnbcUs, cnbcUsArticles, setCnbcUsArticles)}
-                    {newsSourceCheckboxesAndArticleAmounts('BBC News', showBBCNews, setShowBBCNews, bbcArticles, setBBCArticles)}
+                    {newsSourceCheckboxesAndArticleAmounts('CNBC - US News', showCnbcUs, setShowCnbcUs, cnbcUsArticles, setCnbcUsArticles)}                  
                     {newsSourceCheckboxesAndArticleAmounts('The Hill', showTheHill, setShowTheHill, theHillArticles, setTheHillArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Jerusalem Post', showJerusalemPost, setShowJerusalemPost, jerusalemPostArticles, setJerusalemPostArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Marketwatch', showMarketwatch, setShowMarketwatch, marketwatchArticles, setMarketwatchArticles)}
+                    {newsSourceCheckboxesAndArticleAmounts('Newsweek', showNewsweek, setShowNewsweek, newsweekArticles, setNewsweekArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Real Clear Politics', showRCP, setShowRCP, rcpArticles, setRCPArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Sky News', showSkyNews, setShowSkyNews, skyNewsArticles, setSkyNewsArticles)}
                     <h3 className='dropdown-political-alignment-header'>Center Right</h3>
@@ -381,7 +375,6 @@ const NewsFeed = () => {
                     {showAxios && newsArticles(showAxios, axiosArticles, 5, newsSources)}
                     {showDerSpiegel && newsArticles(showDerSpiegel, derSpiegelArticles, 19, newsSources)}
                     {showFiveThirtyEight && newsArticles(showFiveThirtyEight, fiveThirtyEightArticles, 30, newsSources)}
-                    {showLaTimes && newsArticles(showLaTimes, laTimesArticles, 36, newsSources)}
                     {showMediaite && newsArticles(showBostonGlobe, bostonGlobeArticles, 18, newsSources)}
                     {showNewYorkTimes && newsArticles(showNewYorkTimes, newYorkTimesArticles, 1, newsSources)}
                     {showVox && newsArticles(showVox, voxArticles, 31, newsSources)}
@@ -389,11 +382,11 @@ const NewsFeed = () => {
                 </div>
                 <div>
                     <h3 className='political-alignment-header'>Center</h3>
-                    {showBBCNews && newsArticles(showBBCNews, bbcArticles, 7, newsSources)}
                     {showCnbcUs && newsArticles(showCnbcUs, cnbcUsArticles, 29, newsSources)}
                     {showTheHill && newsArticles(showTheHill, theHillArticles, 3, newsSources)}
                     {showJerusalemPost && newsArticles(showJerusalemPost, jerusalemPostArticles, 21, newsSources)}
                     {showMarketwatch && newsArticles(showMarketwatch, marketwatchArticles, 20, newsSources)}
+                    {showNewsweek && newsArticles(showNewsweek, newsweekArticles, 7, newsSources)}
                     {showRCP && newsArticles(showRCP, rcpArticles, 22, newsSources)}
                     {showSkyNews && newsArticles(showSkyNews, skyNewsArticles, 16, newsSources)}
                 </div>
@@ -447,7 +440,6 @@ const NewsFeed = () => {
                                 {showAxios && newsArticles(showAxios, axiosArticles, 5, newsSources)}
                                 {showDerSpiegel && newsArticles(showDerSpiegel, derSpiegelArticles, 19, newsSources)}
                                 {showFiveThirtyEight && newsArticles(showFiveThirtyEight, fiveThirtyEightArticles, 30, newsSources)}
-                                {showLaTimes && newsArticles(showLaTimes, laTimesArticles, 36, newsSources)}
                                 {showMediaite && newsArticles(showBostonGlobe, bostonGlobeArticles, 18, newsSources)}
                                 {showNewYorkTimes && newsArticles(showNewYorkTimes, newYorkTimesArticles, 1, newsSources)}
                                 {showVox && newsArticles(showVox, voxArticles, 31, newsSources)}
@@ -457,11 +449,11 @@ const NewsFeed = () => {
                         <SwiperSlide>
                             <div className="swiper-slide-content">
                                 <h3 className='political-alignment-header'>Center</h3>
-                                {showBBCNews && newsArticles(showBBCNews, bbcArticles, 7, newsSources)}
                                 {showCnbcUs && newsArticles(showCnbcUs, cnbcUsArticles, 29, newsSources)}
                                 {showTheHill && newsArticles(showTheHill, theHillArticles, 3, newsSources)}
                                 {showJerusalemPost && newsArticles(showJerusalemPost, jerusalemPostArticles, 21, newsSources)}
                                 {showMarketwatch && newsArticles(showMarketwatch, marketwatchArticles, 20, newsSources)}
+                                {showNewsweek && newsArticles(showNewsweek, newsweekArticles, 7, newsSources)}
                                 {showRCP && newsArticles(showRCP, rcpArticles, 22, newsSources)}
                                 {showSkyNews && newsArticles(showSkyNews, skyNewsArticles, 16, newsSources)}
                             </div>

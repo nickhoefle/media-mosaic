@@ -50,10 +50,10 @@ const newsSources = [
     },
     {
         index: 7,
-        name: 'BBC',
-        url: 'https://rss.app/feeds/N4kBzbL3HYwQBNe3.xml',
+        name: 'Newsweek - US',
+        url: 'https://www.newsweek.com/rss',
         currentData: null,
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/BBC_Logo_2021.svg/1920px-BBC_Logo_2021.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Newsweek_Logo.svg/800px-Newsweek_Logo.svg.png',
     },
     {
         index: 8,
@@ -240,12 +240,6 @@ const newsSources = [
         url: 'https://jacobin.com/feed',
         logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Jacobin_Logo.svg/225px-Jacobin_Logo.svg.png'
     },
-    {
-        index: 36,
-        name: 'Los Angeles Times',
-        url: 'https://www.latimes.com/world-nation/rss2.0.xml#nt=0000016c-0bf3-d57d-afed-2fff84fd0000-1col-7030col1',
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Los_Angeles_Times_logo.svg/2560px-Los_Angeles_Times_logo.svg.png'
-    }
 ];
 
 export default newsSources;

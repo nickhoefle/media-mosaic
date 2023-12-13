@@ -41,6 +41,7 @@ const newsSourceCheckboxesAndArticleAmounts = (sourceName, checked, onCheckedCha
                         id={`${sourceName}Articles`}
                         value={numArticles}
                         onChange={(e) => handleNumArticlesChange(Number(e.target.value))}
+                        min="1"
                     />
                 </>
             )}
