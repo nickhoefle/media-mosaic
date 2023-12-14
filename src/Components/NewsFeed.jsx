@@ -322,7 +322,7 @@ const NewsFeed = () => {
                     {newsSourceCheckboxesAndArticleAmounts('Der Spiegel', showDerSpiegel, setShowDerSpiegel, derSpiegelArticles, setDerSpiegelArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Five Thirty Eight', showFiveThirtyEight, setShowFiveThirtyEight, fiveThirtyEightArticles, setFiveThirtyEightArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Mediaite', showMediaite, setShowMediaite, mediaiteArticles, setMediaiteArticles)}
-                    {newsSourceCheckboxesAndArticleAmounts('New York Times', showNewYorkTimes, setShowNewYorkTimes, newYorkTimesArticles, setNewYorkTimesArticles)}
+                    {newsSourceCheckboxesAndArticleAmounts('New York Times', showNewYorkTimes, setShowNewYorkTimes, newYorkTimesArticles, setNewYorkTimesArticles, true)}
                     {newsSourceCheckboxesAndArticleAmounts('Vox', showVox, setShowVox, voxArticles, setVoxArticles)}
                     {newsSourceCheckboxesAndArticleAmounts('Washington Post - Politics', showWapo, setShowWapo, wapoArticles, setWapoArticles)}
                     <h3 className='dropdown-political-alignment-header'>Center</h3>

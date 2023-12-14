@@ -50,10 +50,10 @@ const newsSources = [
     },
     {
         index: 7,
-        name: 'Newsweek - US',
-        url: 'https://www.newsweek.com/rss',
+        name: 'BBC',
+        url: 'https://rss.app/feeds/N4kBzbL3HYwQBNe3.xml',
         currentData: null,
-        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Newsweek_Logo.svg/800px-Newsweek_Logo.svg.png',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/BBC_Logo_2021.svg/1920px-BBC_Logo_2021.svg.png',
     },
     {
         index: 8,

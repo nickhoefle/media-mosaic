@@ -372,6 +372,13 @@ code {
   margin-left: auto;
 }
 
+.wall {
+  height: 19px;
+  width: auto;
+  margin-left: 4px;
+  margin-bottom: -4px;
+}
+
 .website-title {
   font-size: 48px;
   font-weight: bold;

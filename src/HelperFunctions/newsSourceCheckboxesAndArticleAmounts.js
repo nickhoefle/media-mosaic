@@ -1,6 +1,6 @@
 import React from 'react';
 
-const newsSourceCheckboxesAndArticleAmounts = (sourceName, checked, onCheckedChange, numArticles, onNumArticlesChange) => {
+const newsSourceCheckboxesAndArticleAmounts = (sourceName, checked, onCheckedChange, numArticles, onNumArticlesChange, hasPaywall) => {
     
     const handleNumArticlesChange = (newValue) => {
         const maxNumber = 9;
@@ -31,6 +31,7 @@ const newsSourceCheckboxesAndArticleAmounts = (sourceName, checked, onCheckedCha
                 onChange={(e) => onCheckedChange(e.target.checked)}
             />
             {sourceName}
+            {hasPaywall && <img src="https://www.svgrepo.com/show/217184/wall.svg" className="wall" alt="Paywall" />} 
             {checked && (
                 <>
                     <button className='plus-button' onClick={increaseArticles}>+</button>
