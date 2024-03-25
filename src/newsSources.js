@@ -109,7 +109,7 @@ const newsSources = [
         name: 'Reason',
         url: 'https://reason.com/feed/',
         currentData: null,
-        logo: 'https://d2eehagpk5cl65.cloudfront.net/wp-content/themes/reason-dot-com-theme/dist/images/logo_2ea65906.svg',
+        logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Reason_logo.svg/1920px-Reason_logo.svg.png',
     },
     {
         index: 16,

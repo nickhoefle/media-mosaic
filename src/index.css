@@ -68,6 +68,27 @@ code {
   width: 95%;
 }
 
+.dropdown-menu::-webkit-scrollbar {
+  width: 8px; 
+  padding-right: 20px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: #f0f0f0; 
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background-color: #9A9A9A; 
+  border-radius: 4px; 
+}
+
+.dropdown-menu::-webkit-scrollbar-button:start:decrement,
+.dropdown-menu::-webkit-scrollbar-button:end:increment {
+  width: 8px; 
+  height: 1.5px; 
+  background-color: #f0f0f0; 
+}
+
 .email {
   padding-right: 12px;
 }
