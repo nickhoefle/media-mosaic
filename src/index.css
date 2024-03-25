@@ -159,9 +159,6 @@ code {
 
 .hamburger-icon,
 .x-icon {
-  display: flex;
-  border: 1.5px solid #000;
-  padding: 3px 8px 3px 8px;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
@@ -170,7 +167,7 @@ code {
   justify-content: space-between;
 }
 
-.menu-icon {
+.menu-header {
   cursor: pointer;
   width: 250px;
   height: 48px;
@@ -179,6 +176,15 @@ code {
   align-items: center;
   font-size: 24px;
   margin-left: 8px;
+}
+
+.menu-icon-wrapper {
+  height: 40px;
+  width: 40px;
+  border: 1.5px solid #000;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .my-feed-text {

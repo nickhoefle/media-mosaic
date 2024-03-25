@@ -288,8 +288,10 @@ const NewsFeed = () => {
         <>
             {/* NAVBAR */}
             <nav className='navbar'>
-                <div className="menu-icon" onClick={handleMenuToggle}>
-                    {isMenuOpen ? <div className="x-icon">X</div> : <div className="hamburger-icon">☰</div>}
+                <div className="menu-header" onClick={handleMenuToggle}>
+                    <div className='menu-icon-wrapper'>
+                        {isMenuOpen ? <p className="x-icon">X</p> : <div className="hamburger-icon">☰</div>}
+                    </div>
                     <h2 className='my-feed-text'>My Feed</h2>
                 </div>              
                 <span className='website-title'>MediaMosiac</span>
