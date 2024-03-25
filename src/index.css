@@ -331,10 +331,16 @@ code {
   width: 99.5%;
   border: 2px solid black;
   cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
 }
 
 .save-button.flashing {
   animation: flash 0.3s; /* Flashing effect duration */
+}
+
+.save-button:hover {
+  background-color: rgb(136, 201, 136);
 }
 
 .save-button-container {
